@@ -1,0 +1,5 @@
+- [ ] create repo.
+- [ ] add simple page that contains hello.
+- [ ] run build app
+- [ ] send app to isamil to test
+- [ ] change logo to the gover logo
