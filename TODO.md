@@ -18,3 +18,7 @@
 - [ ] custom 404 page
 - [ ] check if user already exists display message with ability to access his/here history
 - [ ] report
+
+# improvments
+
+- [ ] add unit testing
