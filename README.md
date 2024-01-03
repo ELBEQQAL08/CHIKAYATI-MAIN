@@ -183,4 +183,5 @@ Please refer to [HOW_TO file](./HOW_TO.md)
 
 - create routing module: `ng g m new-compliant --routing=true --flat=false`
 - create component and module: `ng g c new-compliant -m=new-compliant --flat=false`
+- create component under sub folder: `ng g component shared/components/navigation-bar`
 - run electron locally: `electron-local`

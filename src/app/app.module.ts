@@ -16,13 +16,14 @@ import { DetailModule } from './detail/detail.module';
 
 import { AppComponent } from './app.component';
 import { NewCompliantComponent } from './new-compliant/new-compliant.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
   new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
-  declarations: [AppComponent, NewCompliantComponent],
+  declarations: [AppComponent, NewCompliantComponent, NavBarComponent],
   imports: [
     BrowserModule,
     FormsModule,

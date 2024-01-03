@@ -1,6 +1,5 @@
 # Todos
 
-- [ ] create new compliant
 - [ ] create new compliant form
   - first name
   - last name
@@ -12,6 +11,8 @@
   - properties of compliant
   - compliant details
   - description of compliant
+  - possible solutions
+- [ ] add compliant relate to specific user if exists
 - [ ] integrate offline database
 - [ ] list of compliant
 - [ ] add common layout
