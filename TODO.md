@@ -1,17 +1,13 @@
 # Todos
 
 - [ ] create new compliant form
-  - first name
-  - last name
-  - sex
-  - birthday
-  - place of day
-  - select location
-  - compliant type
-  - properties of compliant
-  - compliant details
-  - description of compliant
-  - possible solutions
+  - add type
+  - add select
+  - add validation
+  - تادوت
+  - add list of each content
+  - add loading
+  - display notification after compliant added
 - [ ] add compliant relate to specific user if exists
 - [ ] integrate offline database
 - [ ] list of compliant
