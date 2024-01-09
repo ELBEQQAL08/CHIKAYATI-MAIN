@@ -19,7 +19,12 @@
 - [ ] custom 404 page
 - [ ] check if user already exists display message with ability to access his/here history
 - [ ] report
+- [ ] setup basic express app with typescript (we can use CJ template)
+- [ ] add possible database
 
 # improvments
 
 - [ ] add unit testing
+- [ ] fix complian wording because not correct
+- [ ] convert input to component as well
+- [ ] move nav bar to shared component and fix routerLink issue.

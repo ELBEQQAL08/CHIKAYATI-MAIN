@@ -1,0 +1,125 @@
+<form class="w-[600px] text-right">
+  <h1 class="text-center text-3xl font-bold my-7">
+    شكاية جديدة – المعلومات الشخصية
+  </h1>
+  <div>
+    <label htmlFor="firstName" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :اسم
+    </label>
+    <input
+      id="firstName"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="firstNameControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="lastName" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :النسب
+    </label>
+    <input
+      id="lastName"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="lastNameControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="sex" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :الجنس
+    </label>
+    <input
+      id="sex"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="sexControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="birthDate" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :تاريخ ازدياد
+    </label>
+    <input
+      id="birthDate"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="birthDateControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="birthDateLocation" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :مكان ازدياد
+    </label>
+    <input
+      id="birthDateLocation"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="birthDateLocationControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="villageLocation" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :الدوار
+    </label>
+    <input
+      id="villageLocation"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="villageLocationControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="compliantType" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :نوع شكاية
+    </label>
+    <input
+      id="compliantType"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="compliantTypeControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="propertyOfCompliant" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :خصائص شكاية
+    </label>
+    <input
+      id="propertyOfCompliant"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="propertyOfCompliantControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="compliantDetails" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :تفاصيل شكاية
+    </label>
+    <input
+      id="compliantDetails"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="compliantDetailsControl"
+    />
+  </div>
+  <div>
+    <label htmlFor="possibleSolutionControl" class="font-bold text-2xl">
+      <span class="text-red-500">*</span>
+      :التدابير المتخدة لمعالجة الشكاية
+    </label>
+    <input
+      id="possibleSolutionControl"
+      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl"
+      type="text"
+      [formControl]="possibleSolutionControl"
+    />
+  </div>
+</form>

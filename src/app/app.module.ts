@@ -17,6 +17,7 @@ import { DetailModule } from './detail/detail.module';
 import { AppComponent } from './app.component';
 import { NewCompliantComponent } from './new-compliant/new-compliant.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ComplainFormComponent } from './components/complain-form/complain-form.component';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
@@ -33,6 +34,7 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
     HomeModule,
     DetailModule,
     AppRoutingModule,
+    ComplainFormComponent,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
