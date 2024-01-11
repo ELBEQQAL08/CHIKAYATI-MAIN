@@ -1,7 +1,12 @@
-<form class="w-[600px] py-8">
+<form
+  class="w-[600px] py-8"
+  [formGroup]="registrationForm"
+  (ngSubmit)="onSubmit()"
+>
   <h1 class="text-center text-3xl font-bold my-7">
     شكاية جديدة – المعلومات الشخصية
   </h1>
+
   <div class="mb-5 text-right">
     <label htmlFor="firstName" class="font-bold text-2xl">
       <span class="text-red-500">*</span>
@@ -11,7 +16,8 @@
       id="firstName"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="firstNameControl"
+      name="firstName"
+      formControlName="firstName"
     />
   </div>
   <div class="mb-5 text-right">
@@ -23,7 +29,8 @@
       id="lastName"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="lastNameControl"
+      name="lastName"
+      formControlName="lastName"
     />
   </div>
   <div class="mb-5 text-right">
@@ -31,12 +38,27 @@
       <span class="text-red-500">*</span>
       :الجنس
     </label>
-    <input
-      id="sex"
-      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
-      type="text"
-      [formControl]="sexControl"
-    />
+
+    <div class="flex my-4">
+      <input
+        id="sex"
+        class="w-full text-right"
+        type="radio"
+        name="gender"
+        formControlName="gender"
+        value="ذكر"
+      />
+      <span class="text-2xl">ذكر</span>
+      <input
+        id="sex"
+        class="w-full text-right"
+        type="radio"
+        name="gender"
+        formControlName="gender"
+        value="أنثى"
+      />
+      <span class="text-2xl">أنثى</span>
+    </div>
   </div>
   <div class="mb-5 text-right">
     <label htmlFor="birthDate" class="font-bold text-2xl">
@@ -47,7 +69,9 @@
       id="birthDate"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="birthDateControl"
+      name="birthDate"
+      formControlName="birthDate"
+      type="date"
     />
   </div>
   <div class="mb-5 text-right">
@@ -59,20 +83,26 @@
       id="birthDateLocation"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="birthDateLocationControl"
+      name="birthDateLocation"
+      formControlName="birthDateLocation"
     />
   </div>
+
   <div class="mb-5 text-right">
     <label htmlFor="villageLocation" class="font-bold text-2xl">
       <span class="text-red-500">*</span>
       :الدوار
     </label>
-    <input
-      id="villageLocation"
-      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
-      type="text"
-      [formControl]="villageLocationControl"
-    />
+
+    <select
+      class="bg-gray-400 w-full h-14 text-2xl text-right"
+      name="villageLocation"
+      formControlName="villageLocation"
+    >
+      <option *ngFor="let village of villages" [value]="village">
+        {{ village.name }}
+      </option>
+    </select>
   </div>
   <div class="mb-5 text-right">
     <label htmlFor="compliantType" class="font-bold text-2xl">
@@ -83,7 +113,8 @@
       id="compliantType"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="compliantTypeControl"
+      name="compliantType"
+      formControlName="compliantType"
     />
   </div>
   <div class="mb-5 text-right">
@@ -95,7 +126,8 @@
       id="propertyOfCompliant"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="propertyOfCompliantControl"
+      name="propertyOfCompliant"
+      formControlName="propertyOfCompliant"
     />
   </div>
   <div class="mb-5 text-right">
@@ -107,22 +139,25 @@
       id="compliantDetails"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="compliantDetailsControl"
+      name="compliantDetails"
+      formControlName="compliantDetails"
     />
   </div>
   <div class="text-right mb-8">
-    <label htmlFor="possibleSolutionControl" class="font-bold text-2xl">
+    <label htmlFor="possibleSolution" class="font-bold text-2xl">
       <span class="text-red-500">*</span>
       :التدابير المتخدة لمعالجة الشكاية
     </label>
     <input
-      id="possibleSolutionControl"
+      id="possibleSolution"
       class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
       type="text"
-      [formControl]="possibleSolutionControl"
+      name="possibleSolution"
+      formControlName="possibleSolution"
     />
   </div>
   <button
+    type="submit"
     class="rounded-full w-full px-4 py-2 text-white text-center text-3xl bg-green-500 hover:bg-green-400 cursor-pointer"
   >
     إنشاء
