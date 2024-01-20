@@ -7,8 +7,12 @@ import {
   Validators,
 } from '@angular/forms';
 import { DataType } from '../../types';
-import * as compliantDetailsData from '../../../assets/data/compliant-details.json';
-import * as villagesData from '../../../assets/data/villages.json';
+import compliantDetailsData from '../../../assets/data/compliant-details.json';
+import compliantNotSolvedReasonsData from '../../../assets/data/compliant-not-solved-reasons.json';
+import compliantPropertiesData from '../../../assets/data/compliant-properties.json';
+import compliantSolutionsData from '../../../assets/data/compliant-solutions.json';
+import compliantTypesData from '../../../assets/data/compliant-types.json';
+import villages from '../../../assets/data/villages.json';
 import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
@@ -18,20 +22,16 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [ReactiveFormsModule, FormsModule, BrowserModule],
   standalone: true,
 })
-export class ComplainFormComponent implements OnInit {
+export class ComplainFormComponent {
   isSubmitted: boolean = false;
-  villages: DataType[] = [{ name: 'test' }, { name: 'test1' }];
+  villages: DataType[] = villages;
   compliantDetails: DataType[] = compliantDetailsData;
-  compliantProperties: DataType[] = [];
-  compliantTypes: DataType[] = [];
-  complientSolutions: DataType[] = [];
-  complientNotSolvedReasons: DataType[] = [];
+  compliantProperties: DataType[] = compliantPropertiesData;
+  compliantTypes: DataType[] = compliantTypesData;
+  complientSolutions: DataType[] = compliantSolutionsData;
+  complientNotSolvedReasons: DataType[] = compliantNotSolvedReasonsData;
 
   constructor(public fb: FormBuilder) {}
-
-  ngOnInit() {
-    console.log(this.villages);
-  }
 
   registrationForm = this.fb.group({
     gender: ['ذكر', [Validators.required]],

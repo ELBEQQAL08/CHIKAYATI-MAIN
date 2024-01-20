@@ -99,6 +99,7 @@
       name="villageLocation"
       formControlName="villageLocation"
     >
+      <option disabled selected value="null">اختر القرية</option>
       <option *ngFor="let village of villages" [value]="village">
         {{ village.name }}
       </option>
@@ -109,52 +110,78 @@
       <span class="text-red-500">*</span>
       :نوع شكاية
     </label>
-    <input
-      id="compliantType"
-      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
-      type="text"
-      name="compliantType"
-      formControlName="compliantType"
-    />
+    <select
+      class="bg-gray-400 w-full h-14 text-2xl text-right"
+      name="villageLocation"
+      formControlName="villageLocation"
+    >
+      <option [value]="null" selected="selected">اختر نوع شكاية</option>
+      <option
+        *ngFor="let compliantType of compliantTypes"
+        [value]="compliantType"
+      >
+        {{ compliantType.name }}
+      </option>
+    </select>
   </div>
   <div class="mb-5 text-right">
     <label htmlFor="propertyOfCompliant" class="font-bold text-2xl">
       <span class="text-red-500">*</span>
       :خصائص شكاية
     </label>
-    <input
-      id="propertyOfCompliant"
-      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
-      type="text"
-      name="propertyOfCompliant"
-      formControlName="propertyOfCompliant"
-    />
+    <select
+      class="bg-gray-400 w-full h-14 text-2xl text-right"
+      name="villageLocation"
+      formControlName="villageLocation"
+    >
+      <option [value]="null" selected>اختر خصائص شكاية</option>
+      <option
+        *ngFor="let compliantPropertie of compliantProperties"
+        [value]="compliantPropertie"
+      >
+        {{ compliantPropertie.name }}
+      </option>
+    </select>
   </div>
   <div class="mb-5 text-right">
     <label htmlFor="compliantDetails" class="font-bold text-2xl">
       <span class="text-red-500">*</span>
       :تفاصيل شكاية
     </label>
-    <input
-      id="compliantDetails"
-      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
-      type="text"
-      name="compliantDetails"
-      formControlName="compliantDetails"
-    />
+    <select
+      class="bg-gray-400 w-full h-14 text-2xl text-right"
+      name="villageLocation"
+      formControlName="villageLocation"
+    >
+      <option [value]="null" selected>اختر تفاصيل شكاية</option>
+      <option
+        *ngFor="let compliantDetail of compliantDetails"
+        [value]="compliantDetail"
+      >
+        {{ compliantDetail.name }}
+      </option>
+    </select>
   </div>
   <div class="text-right mb-8">
     <label htmlFor="possibleSolution" class="font-bold text-2xl">
       <span class="text-red-500">*</span>
       :التدابير المتخدة لمعالجة الشكاية
     </label>
-    <input
-      id="possibleSolution"
-      class="bg-gray-400 w-full h-14 rounded-md p-4 text-2xl text-right"
-      type="text"
-      name="possibleSolution"
-      formControlName="possibleSolution"
-    />
+    <select
+      class="bg-gray-400 w-full h-14 text-2xl text-right"
+      name="villageLocation"
+      formControlName="villageLocation"
+    >
+      <option [value]="null" selected>
+        اخترالتدابير المتخدة لمعالجة الشكاية
+      </option>
+      <option
+        *ngFor="let complientSolution of complientSolutions"
+        [value]="complientSolution"
+      >
+        {{ complientSolution.name }}
+      </option>
+    </select>
   </div>
   <button
     type="submit"
