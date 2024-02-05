@@ -1,25 +1,34 @@
 # Todos
 
-- [ ] fix select default value issue
-- [ ] create new compliant form
-  - add type
-  - add select
-  - add validation
-  - تادوت
-  - add list of each content
-  - add loading
-  - display notification after compliant added
-- [ ] add compliant relate to specific user if exists
-- [ ] integrate offline database
-- [ ] list of compliant
-- [ ] add common layout
-- [ ] custom 404 page
-- [ ] check if user already exists display message with ability to access his/here history
-- [ ] report
-- [ ] setup basic express app with typescript (we can use CJ template)
-- [ ] add possible database
+- [ ] remove navbar component
+- [ ] add missing list
+- [ ] display list when selected
+- [ ] remove "tadabir" select
+- [ ] add background color like cni website
+- [ ] add search bar form in home page like google home page
+  - [ ] click on search icon or hit enter in the keyboard
+  - [ ] display message when user not found + "add user"
+- [ ] create "add user" page
+- [ ] create "display user details page"
+- [ ] create user schema
+  - user values:
+    - cin (unique)
+    - first name
+    - last name
+    - birthdate
+    - location birth
+    - gender
+    - village location
+- [ ] create compliant schema
+  - compliant values:
+    - compliant type
+    - property of compliant
+    - compliant details
+    - possible solution
+    - status
+- [ ] create "compliant list"
 
-# improvments
+## improvments
 
 - [ ] add unit testing
 - [ ] fix complian wording because not correct
