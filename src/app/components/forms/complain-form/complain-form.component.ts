@@ -6,13 +6,13 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { DataType } from '../../types';
-import compliantDetailsData from '../../../assets/data/compliant-details.json';
-import compliantNotSolvedReasonsData from '../../../assets/data/compliant-not-solved-reasons.json';
-import compliantPropertiesData from '../../../assets/data/compliant-properties.json';
-import compliantSolutionsData from '../../../assets/data/compliant-solutions.json';
-import compliantTypesData from '../../../assets/data/compliant-types.json';
-import villages from '../../../assets/data/villages.json';
+import { DataType } from '../../../types';
+import compliantDetailsData from '../../../../assets/data/compliant-details.json';
+import compliantNotSolvedReasonsData from '../../../../assets/data/compliant-not-solved-reasons.json';
+import compliantPropertiesData from '../../../../assets/data/compliant-properties.json';
+import compliantSolutionsData from '../../../../assets/data/compliant-solutions.json';
+import compliantTypesData from '../../../../assets/data/compliant-types.json';
+import villages from '../../../../assets/data/villages.json';
 import { BrowserModule } from '@angular/platform-browser';
 
 @Component({

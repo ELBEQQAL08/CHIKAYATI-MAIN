@@ -11,20 +11,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { HomeModule } from './home/home.module';
-import { DetailModule } from './detail/detail.module';
+import { HomeModule } from './screens/home/home.module';
+import { DetailModule } from './screens/detail/detail.module';
 
 import { AppComponent } from './app.component';
-import { NewCompliantComponent } from './new-compliant/new-compliant.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { ComplainFormComponent } from './components/complain-form/complain-form.component';
+import { NewCompliantComponent } from './screens/new-compliant/new-compliant.component';
+import { ComplainFormComponent } from './components/forms/complain-form/complain-form.component';
+import { SearchComponent } from './components/forms/search/search.component';
+import { HomeComponent } from './screens/home/home.component';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
   new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
-  declarations: [AppComponent, NewCompliantComponent, NavBarComponent],
+  declarations: [AppComponent, HomeComponent, NewCompliantComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -35,6 +36,7 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
     DetailModule,
     AppRoutingModule,
     ComplainFormComponent,
+    SearchComponent,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

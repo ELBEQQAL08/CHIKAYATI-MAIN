@@ -185,3 +185,4 @@ Please refer to [HOW_TO file](./HOW_TO.md)
 - create component and module: `ng g c new-compliant -m=new-compliant --flat=false`
 - create component under sub folder: `ng g component shared/components/navigation-bar`
 - run electron locally: `electron-local`
+- generate standalone component: `ng n c ComponentName --flat --standalone`
